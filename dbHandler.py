@@ -1,4 +1,5 @@
 import sqlite3
+from encrypt import encrypt
 
 class databaseHandler:
     def __init__(self):
@@ -8,7 +9,7 @@ class databaseHandler:
         self.con.commit()
     
     def addUser(self, name: str, email: str, phone_number: str, question: str):
-        self.cur.execute("INSERT INTO users (name, email, phone_number, question) VALUES (?, ?, ?, ?)", (name, email, phone_number, question))
+        self.cur.execute("INSERT INTO users (name, email, phone_number, question) VALUES (?, ?, ?, ?)", (encrypt(name), encrypt(email), encrypt(phone_number), question))
         self.con.commit()
 
     def removeUser(self, id: int):
