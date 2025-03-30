@@ -198,6 +198,12 @@ footer {
     grid-template-columns: repeat(3, 1fr);
 }
 
+@media only screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .col {
     padding: 10px 15px;
 }
