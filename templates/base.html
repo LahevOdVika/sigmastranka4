@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obalynazakazku.cz | Obaly na telefony s vlastním 3D potiskem</title>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <a href="https://obalynazakazku.cz" title="Obaly na zakázku">
+            <img src="{{ url_for('static', filename='images/header-logo.webp') }}" alt="Header logo" width="266" height="80">
+        </a>
+        <button type="button" class="navbar-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="https://obalynazakazku.cz" title="Obaly na zakázku">Domů</a></li>
+                <li><a href="https://obalynazakazku.cz/galerie" title="Galerie Zákazníků">Galerie</a></li>
+                <li><a href="https://obalynazakazku.cz/iphone" title="Objednat">Objednat</a></li>
+                <li><a href="https://obalynazakazku.cz/kontakt" title="Kontakt">Kontakt</a></li>
+                <li class="telephone">
+                    <a href="tel:+420602202523" title="Zavolejte Nám">
+                        +420 602 202 523
+                        <i class="fa fa-phone"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container"><!-- Hlavní obsah --></div>
+    <footer>
+        <div class="container">
+            <div class="grid">
+                <div class="col col-1">
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/header-logo.webp') }}" alt="Obaly na zakázku">
+                    </div>
+                    <p>Specializujeme se na výrobu obalů pro Vaše mobilní telefony a smartphony. Buďte stylový a odlište se od ostatních svým obalem na zakázku!</p>
+                    <div class="aboutContact">
+                        <div class="icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="contactNumber">
+                            <p>Kontaktujte Nás</p>
+                            <cite>
+                                <a href="tel:+420602202523">+420 602 202 523</a>
+                            </cite>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <h5>Naše Odkazy</h5>
+                    <ul>
+                        <li><a href="https://obalynazakazku.cz/o-nas" target="_self" title="Náš Příběh">Náš Příběh</a></li>
+                        <li><a href="https://obalynazakazku.cz/kontakt" title="Kontakt">Kontaktujte Nás</a></li>
+                        <li><a href="https://obalynazakazku.cz/galerie" target="_self" title="Galerie Zákazníků">Galerie Zákazníků</a></li>
+                        <li><a href="https://obalynazakazku.cz/doprava-postovne" target="_self" title="Doprava & Poštovné">Doprava & Poštovné</a></li>
+                        <li><a href="https://obalynazakazku.cz/faq" target="_self">Nejčastější Dotazy</a></li>
+                        <li><a href="https://obalynazakazku.cz/gdpr" target="_self" title="Ochrana Osobních Údajů">Ochrana Osobních Údajů</a></li>
+                        <li><a href="https://obalynazakazku.cz/obchodní-podmínky" target="_self" title="Obchodní Podmínky">Obchodní Podmínky</a></li>
+                        <li><a href="https://obalynazakazku.cz/iphone" target="_self">Zadat Objednávku</a></li>
+                    </ul>
+                    <ul class="socailLinks">
+                        <li class="instagram">
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/obalynazakazku/">
+                                <img src="https://obalynazakazku.cz/wp-content/themes/obalynazakazku/assets/img/footer-instagram.webp" alt="Instagram" width="25" height="25">
+                            </a>
+                        </li>
+                        <li class="facebook">
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/obalynazakazku">
+                                <img src="https://obalynazakazku.cz/wp-content/themes/obalynazakazku/assets/img/footer-facebook.webp" alt="Facebook" width="25" height="25">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-3">
+                    <h5>Důležité informace</h5>
+                    <div class="address">
+                        <div class="icon">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </div>
+                        <div class="addressText">
+                            <span>Výdejní Místo</span>
+                            <p>IPHONE SERVIS PRAHA,
+                                <br>
+                                Ostrovského 971/11, Praha 5
+                                <br>
+                                Otevírací doba: Po-Pá, 12 - 17h.
+                            </p>
+                            <span>Napište Nám</span>
+                            <cite>
+                                <a href="mailto:info@obalynazakazku.cz">info@obalynazakazku.cz</a>
+                            </cite>
+                            <span>Bankovní Spojení</span>
+                            <cite>1280710027 / 3030</cite>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2025 Navrhl & Vytvořil <a href="https://chymcakmilan.com/" title="Milan Chymčák" target="_blank" rel="noopener noreferrer">Milan Chymčák</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const header = document.querySelector('header');
+
+    navbarToggle.addEventListener('click', () => {
+        if (header.classList.contains('show-menu')) {
+            header.classList.remove('show-menu');
+        } else {
+            header.classList.add('show-menu');
+        }
+    });
+</script>
+</html>
