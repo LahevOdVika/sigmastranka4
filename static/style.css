@@ -20,6 +20,11 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -31,7 +36,8 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: var(--orange);
+    color: var(--semi-dark-blue);
+    opacity: 0.8;
 }
 
 header {
@@ -55,6 +61,10 @@ nav ul a {
     font-size: 16px;
 }
 
+nav ul a:hover {
+    color: var(--orange);
+}
+
 nav ul li.telephone {
     display: flex;
     justify-content: center;
@@ -70,6 +80,11 @@ nav ul li.telephone a {
     font-size: 20px;
     border-width: 2px;
     line-height: 100%;
+}
+
+nav ul li.telephone a:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
 }
 
 nav ul li.telephone i {
@@ -120,6 +135,10 @@ footer {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.col {
+    padding: 10px 15px;
+}
+
 .col-1 p {
     margin: 10px 0;
     font-size: 16px;
@@ -153,4 +172,79 @@ footer {
     height: 58px;
     line-height: 58px;
     text-align: center;
+}
+
+.contactNumber p {
+    color: var(--orange);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.contactNumber a:hover {
+    color: var(--semi-dark-blue);
+    opacity: 0.8;
+}
+
+.col h5 {
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 22px;
+}
+
+.col h5:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    width: 70px;
+    height: 7px;
+    background-image: url("images/footer-under-title.webp");
+}
+
+.col-2 li {
+    margin: 10px 0;
+}
+
+.socailLinks {
+    display: flex;
+    padding: 15px 0;
+}
+
+.socailLinks li {
+    margin: 0 15px 0 0;
+}
+
+.address {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.col-3 .icon {
+    font-size: 24px;
+    color: white;
+    margin-right: 15px;
+    background-color: var(--orange);
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    border-radius: 30px 30px 0;
+}
+
+.col-3 span {
+    display: block;
+    color: var(--orange);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.col-3 p {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    margin: 10px 0;
 }
