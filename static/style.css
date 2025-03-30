@@ -83,3 +83,74 @@ nav ul li.telephone i {
     color: var(--dark-blue);
     margin-left: 6px;
 }
+
+footer {
+    background-image: url("/static/images/footer-background.webp");
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    font-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top: 200px;
+}
+
+.container {
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--border-color);
+    padding: 30px 0;
+}
+
+.copyright a {
+    margin-left: 5px;
+    color: var(--orange);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.col-1 p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.col-1 .image {
+    max-width: 270px;
+    width: 100%;
+    min-height: 70px;
+}
+
+.col-1 .image img {
+    width: 100%;
+    height: auto;
+}
+
+.aboutContact {
+    display: flex;
+    margin-top: 30px;
+}
+
+.aboutContact .icon i {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 15px;
+    background-color: #f17732;
+    border-radius: 30px 30px 0 30px;
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+}
