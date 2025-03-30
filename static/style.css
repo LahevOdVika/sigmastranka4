@@ -1,4 +1,4 @@
-root {
+:root {
     --dark-blue: #1e2172eb;
     --semi-dark-blue: #565acf;
     --light-blue: #5650cf;
@@ -6,4 +6,80 @@ root {
     --orange: #f17732;
     --white: #fff;
     --border-color: #565acf3d;
-  }
+}
+
+* {
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+body {
+    margin: 0;
+    color: var(--text-color);
+    line-height: 150%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--orange);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    padding: 5px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+nav ul li.telephone {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+nav ul li.telephone a {
+    background-color: var(--semi-dark-blue);
+    color: var(--white);
+    padding: 7px 20px 7px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    border-width: 2px;
+    line-height: 100%;
+}
+
+nav ul li.telephone i {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    margin-left: 6px;
+}
