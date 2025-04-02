@@ -1,0 +1,48 @@
+.page-home {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin-right: 70px;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-weight: 800;
+    color: var(--dark-blue);
+    font-size: 50px;
+    line-height: 130%;
+    text-transform: capitalize;
+}
+
+.rotatingText {
+    margin-bottom: 50px;
+    font-size: 25px;
+    line-height: 130%;
+    color: black;
+}
+
+.createCase {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    background: var(--orange);
+    padding: 18px 45px;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.createCase:hover {
+    transform: translateY(-4px);
+    color: white;
+    box-shadow: #ff5e00 0 0 15px;
+    opacity: 1;
+}
+
+.image img {
+    width: 300px;
+    height: auto;
+}

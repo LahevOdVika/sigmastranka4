@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+    Obalynazakazku.cz | Obaly na telefony s vlastním 3D potiskem
+{% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}">
+{% endblock %}
+{% block content %}
+	<main class="page-home">
+        <div class="title">
+            <h2 class="rotatingText">Kryt na <span class="rotatingTextHandler"></span>?</h2>
+            <h1>Profesionální Obaly Na Telefon S Vlastním Potiskem</h1>
+            <a href="https://obalynazakazku.cz/iphone" type="button" title="Objednat Obal" class="createCase">Vytvořit Vlastní Kryt</a>
+        </div>
+        <div class="image">
+            <img src="{{ url_for('static', filename='images/homeimage.webp') }}" alt="Ukázka Obalu Na Telefon" width="300" height="100%">
+        </div>
+    </main>
+{% endblock %}
+{% block javascript %}
+    <script src="{{ url_for('static', filename='home/home.js') }}"></script>
+{% endblock %}
