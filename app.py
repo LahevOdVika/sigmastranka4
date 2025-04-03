@@ -16,7 +16,6 @@ def kontakt():
     if request.method == 'POST':
         with databaseHandler() as db:
             db.addUser(request.form['name'], request.form['email'], request.form['phoneNumber'], request.form['message'])
-            print(request.form['name'], request.form['email'], request.form['phoneNumber'], request.form['message'])
     return render_template('kontakt.html') 
 
 if __name__ == '__main__':

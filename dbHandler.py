@@ -21,7 +21,6 @@ class databaseHandler:
         self.con = sqlite3.connect('misc_files\data.db')
         self.cur = self.con.cursor()
         self.con.commit()
-        self.cur.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, phone_number TEXT, question TEXT)")
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
@@ -29,8 +28,10 @@ class databaseHandler:
             self.con.close()
 
     def addUser(self, name: str, email: str, phone_number: str, question: str):
+        print(name, email, phone_number, question)
         if self.cur is not None:
             self.cur.execute("INSERT INTO users (name, email, phone_number, question) VALUES (?, ?, ?, ?)", (encrypt(name.encode('utf-8')), encrypt(email.encode('utf-8')), encrypt(phone_number.encode('utf-8')), encrypt(question.encode('utf-8'))))
+            self.con.commit()
 
     def removeUser(self, id: int):
         if self.cur is not None:
@@ -45,5 +46,4 @@ class databaseHandler:
 
 if __name__ == '__main__':
     with databaseHandler() as db:
-        db.addUser("test", "test", "test", "test")
         print(db.readData())
