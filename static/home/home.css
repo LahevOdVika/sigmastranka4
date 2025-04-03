@@ -13,7 +13,8 @@ h1 {
     color: var(--dark-blue);
     font-size: 50px;
     line-height: 130%;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
+}
 }
 
 section {
