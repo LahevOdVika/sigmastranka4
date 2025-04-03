@@ -34,7 +34,21 @@
             </ul>
         </nav>
     </header>
-    <div class="container"><!-- Hlavní obsah --></div>
+    <div class="container">
+
+        <form action="/kontakt" method="POST">
+            <label for="name">Vaše Jméno</label><br>
+            <input type="text" name="name"><br>
+            <label for="email">Email</label><br>
+            <input type="text" name="email"><br>
+            <label for="phoenNumber">Telefonní Číslo</label><br>
+            <input type="text" name="phoneNumber"><br>
+            <label for="message">Zprava</label><br>
+            <input type="text" name="message"><br>
+            <button type="submit">Odeslat</button>
+        </form>
+
+    </div>
     <footer>
         <div class="container">
             <div class="grid">
