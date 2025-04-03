@@ -11,7 +11,8 @@ def loadKey():
         with open('misc_files\\key', 'rb') as key_file:
             return key_file.read()
     except FileNotFoundError:
-        raise Exception("Key file not found. Please generate a key first.")
+    except FileNotFoundError:
+        raise FileNotFoundError("Key file not found. Please generate a key first.")
 
 def encrypt(message: str, key: bytes = None):
     if key is None:
