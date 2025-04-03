@@ -109,13 +109,14 @@ section {
     gap: 20px;
 }
 
-.grid .card, .models .card {
+.service-card {
     border: 1px solid grey;
     height: 100%;
     position: relative;
     transition: all ease-in-out 0.2s;
     top: 0;
     left: 0;
+}
 }
 
 .grid .card::after, .models .card::after {
