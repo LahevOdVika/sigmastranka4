@@ -319,14 +319,14 @@ footer {
     margin: 10px 0;
 }
 
-#menuBackground {
+.menuBackground {
     border: var(--border-color) solid 2px;
     border-radius: 8px;
     margin: 0 10px;
 }
 
-#menuBackground:hover{
+.menuBackground:hover{
     background-color: var(--dark-blue);
-    color: var(--orange);
-    transition: 0.3s;
+    color: var(--white);
+    transition: 0.2s ease-in-out;
 }
