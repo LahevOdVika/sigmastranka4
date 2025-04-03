@@ -10,6 +10,19 @@
 - white: #fff;
 - border-color: #565acf3d;
 
+```html
+        <form action="/kontakt" method="POST">
+            <label for="name">Vaše Jméno</label><br>
+            <input type="text" name="name"><br>
+            <label for="email">Email</label><br>
+            <input type="text" name="email"><br>
+            <label for="phoenNumber">Telefonní Číslo</label><br>
+            <input type="text" name="phoneNumber"><br>
+            <label for="message">Zprava</label><br>
+            <input type="text" name="message"><br>
+            <button type="submit">Odeslat</button>
+        </form>
+```
 
 ## Úkoly na hlavní stránce
 - [ ] Odstranit "důležitou zpravu" z domovské stránky
