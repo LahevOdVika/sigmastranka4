@@ -43,6 +43,7 @@ a {
     color: var(--dark-blue);
     text-decoration: none;
 }
+
 a:hover {
     color: var(--semi-dark-blue);
     opacity: 0.8;
@@ -316,4 +317,16 @@ footer {
     line-height: 28px;
     font-weight: 500;
     margin: 10px 0;
+}
+
+.menuBackground {
+    border: var(--border-color) solid 2px;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+.menuBackground:hover{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transition: 0.2s ease-in-out;
 }

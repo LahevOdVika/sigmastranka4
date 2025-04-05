@@ -1,8 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from dbHandler import databaseHandler
 
 app = Flask(__name__)
 
 @app.route('/')
+def hello_world():
+    return render_template('index.html')
 def hello_world():  # put application's code here
     return render_template('home/index.html')
 
@@ -10,6 +13,12 @@ def hello_world():  # put application's code here
 def base():
     return render_template('base.html') # Render na base, hlavně na debug
 
+@app.route('/kontakt', methods=['POST', 'GET'])
+def kontakt():
+    if request.method == 'POST':
+        with databaseHandler() as db:
+            db.addUser(request.form['name'], request.form['email'], request.form['phoneNumber'], request.form['message'])
+    return render_template('kontakt.html') 
 
 if __name__ == '__main__':
     app.run(debug=True)
