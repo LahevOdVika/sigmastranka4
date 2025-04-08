@@ -3,7 +3,7 @@
     --semi-dark-blue: #565acf;
     --light-blue: #5650cf;
     --text-color: #414141;
-    --orange: #f17732;
+    --orange: #f5894a;
     --white: #fff;
     --border-color: #565acf3d;
 }
@@ -43,6 +43,7 @@ a {
     color: var(--dark-blue);
     text-decoration: none;
 }
+
 a:hover {
     color: var(--semi-dark-blue);
     opacity: 0.8;
@@ -316,4 +317,16 @@ footer {
     line-height: 28px;
     font-weight: 500;
     margin: 10px 0;
+}
+
+.menuBackground {
+    border: var(--border-color) solid 2px;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+.menuBackground:hover{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transition: 0.2s ease-in-out;
 }
