@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block title %}
+    Obalynazakazku.cz | Obaly na telefony s vlastním 3D potiskem
+{% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}">
+{% endblock %}
+{% block content %}
+	<section class="page-home">
+        <div class="title">
+            <span class="pill">
+                Navrhni si vlastní obal s potiskem
+            </span>
+            <h1>PROFESIONÁLNÍ OBALY NA TELEFON S VLASTNÍM POTISKEM</h1>
+            <a href="https://obalynazakazku.cz/iphone" type="button" title="Objednat Obal" class="createCase">Vytvořit Vlastní Kryt</a>
+        </div>
+        <div class="image">
+            <img src="{{ url_for('static', filename='images/homeimage.webp') }}" alt="Ukázka Obalu Na Telefon" width="300" height="100%">
+        </div>
+    </section>
+    <main class="primary">
+        <section class="how">
+            <div class="section-title">
+                <h2>Jak to funguje?</h2>
+            </div>
+            <div class="steps">
+                <ul>
+                    <li class="selected">01</li>
+                    <li>02</li>
+                    <li>03</li>
+                </ul>
+                <div class="cards">
+                    <div class="card">
+                        <h2>Nahrajte Obrázek</h2>
+                        <p>Nahrajte & upravte svůj obrázek s pomocí našeho editoru a služeb.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Vytvořte Potisek</h2>
+                        <p>Poté můžete okamžite vytvořte potisek a v naší speciální tiskárně se začně okamžitě tiskout.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Okamžité Odeslání</h2>
+                        <p>Do pár dní obdržíte Váš nový upravený obal na telefon dle zvolené dopravy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="section-title">
+                <h2>Naše Služby</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h4>
+                        <span>
+                            <img src="{{ url_for('static', filename='svg/wrench.svg') }}" alt="Vlastní Design" width="30" height="30">
+                        </span>
+                        Vlastní Design
+                    </h4>
+                    <p>Obalynazakázku.cz Vám poskytují neomezené možnosti, co se týče grafického zpracování vašich mobilních telefonů respektive smartphonů. Máte jedinečnou možnost vymyslet si vlastní design a ten firmě odeslat k převedení do podoby ve formě obalu/krytu.</p>
+                    <p>Další nově provozována služba je možnost zažádat o odborný grafický design, o který se po komunikaci s Vámi postarají naši grafici, kteří se specializují pouze na designy obalů pro mobilní telefony a smartphony.</p>
+                </div>
+                <div class="card">
+                    <h4>
+                        <span>
+                            <img src="{{ url_for('static', filename='svg/cash.svg') }}" alt="Nízká Cena" width="30" height="30">
+                        </span>
+                        BEZKONKURENČNÍ CENA
+                    </h4>
+                    <p>Cena našich obalů se snaží zůstat co nejníže. Obaly jsou vyrobené z kvalitní pevné gumy, která dokonale ochrání Váš telefon, před možnými investicemi za nový display a za podobné mechanické poškození.</p>
+                    <p>Cena je stejná a pevná pro všechny nabízené obaly. Obalynazakázku.cz se však postarají o Vaše sympatie k Našemu obalu.</p>
+                </div>
+                <div class="card">
+                    <h4>
+                        <span>
+                            <img src="{{ url_for('static', filename='svg/truck.svg') }}" alt="Rychlost Doručení" width="30" height="30">
+                        </span>
+                        RYCHLÉ DORUČENÍ
+                    </h4>
+                    <p>Výsledný obal je možné ZDARMA převzít u nás na výdejním místě (Ostrovského 971/11, Praha 5).</p>
+                    <p>Případně zaslat speciálně zabalené doporučeně po platbě na účet předem po celé České republice za 60 korun, PPL za 100 korun nebo přes Zásilkovnu za 70 korun.</p>
+                </div>
+                <div class="card">
+                    <h4>
+                        <span>
+                            <img src="{{ url_for('static', filename='svg/quality.svg') }}" alt="Kvalita" width="30" height="30">
+                        </span>
+                        NAŠE ZÁRUKA
+                    </h4>
+                    <p>Veškeré obaly jsou vyráběny pomocí profesionálních technologií, které jsou určeny přímo pro výrobu obalů na telefony.</p>
+                    <p>Používáme profesionální barvy a velmi kvalitní gumové obaly s AL destičkami, které zaručí pozornost okolí ale zejména ochranu Vašeho telefonu.</p>
+                </div>
+            </div>
+        </section>
+        <section class="recent-models">
+            <div class="section-title">
+                <h2>Naposledy Přidané Obaly</h2>
+            </div>
+            <div class="models">
+                <div class="card">
+                    <div class="phone-details">
+                        <img src="https://cdn.myshoptet.com/usr/www.iphonarna.cz/user/shop/big/3749_apple-iphone-12-256-gb-blue.png?67373560" alt="Placeholder">
+                        <h3>IPhone 12</h3>
+                    </div>
+                    <hr style="width: 100%;" />
+                    <div class="info">
+                        <span class="price">$0.00</span>
+                        <a href="#" class="create" type="button">
+                            Přejít k designu
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="phone-details">
+                        <img src="https://cdn.myshoptet.com/usr/www.iphonarna.cz/user/shop/big/3749_apple-iphone-12-256-gb-blue.png?67373560" alt="Placeholder">
+                        <h3>IPhone 12</h3>
+                    </div>
+                    <hr style="width: 100%;" />
+                    <div class="info">
+                        <span class="price">$0.00</span>
+                        <a href="#" class="create" type="button">
+                            Přejít k designu
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="phone-details">
+                        <img src="https://cdn.myshoptet.com/usr/www.iphonarna.cz/user/shop/big/3749_apple-iphone-12-256-gb-blue.png?67373560" alt="Placeholder">
+                        <h3>IPhone 12</h3>
+                    </div>
+                    <hr style="width: 100%;" />
+                    <div class="info">
+                        <span class="price">$0.00</span>
+                        <a href="#" class="create" type="button">
+                            Přejít k designu
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

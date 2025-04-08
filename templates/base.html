@@ -15,36 +15,31 @@
     {% endblock %}
 </head>
 <body>
-<header>
-    <a href="https://obalynazakazku.cz" title="Obaly na zakázku">
-        <img src="{{ url_for('static', filename='images/header-logo.webp') }}" alt="Header logo" width="266" height="80">
-    </a>
-    <button type="button" class="navbar-toggle">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </button>
-    <nav>
-        <ul>
-            <li><a href="https://obalynazakazku.cz" title="Obaly na zakázku" class="menuBackground">Domů</a></li>
-            <li><a href="https://obalynazakazku.cz/galerie" title="Galerie Zákazníků" class="menuBackground">Galerie</a></li>
-            <li><a href="https://obalynazakazku.cz/iphone" title="Objednat" class="menuBackground">Objednat</a></li>
-            <li><a href="https://obalynazakazku.cz/kontakt" title="Kontakt" class="menuBackground">Kontakt</a></li>
-            <li class="telephone">
-            </li>
-        </ul>
-    </nav>
-</header>
-<div class="container">{% block content %}{% endblock %}</div>
-<footer>
-    <div class="container">
-        <div class="grid">
-            <div class="col col-1">
-                <div class="image">
-                    <img src="{{ url_for('static', filename='images/header-logo.webp') }}" alt="Obaly na zakázku">
-                </div>
-                <p>Specializujeme se na výrobu obalů pro Vaše mobilní telefony a smartphony. Buďte stylový a odlište se od ostatních svým obalem na zakázku!</p>
-                <div class="aboutContact">
-                    <div class="icon">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
+    <header>
+        <a href="https://obalynazakazku.cz" title="Obaly na zakázku">
+            <img src="{{ url_for('static', filename='images/header-logo.webp') }}" alt="Header logo" width="266" height="80">
+        </a>
+        <button type="button" class="navbar-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="https://obalynazakazku.cz" title="Obaly na zakázku" class="menuBackground">Domů</a></li>
+                <li><a href="https://obalynazakazku.cz/galerie" title="Galerie Zákazníků" class="menuBackground">Galerie</a></li>
+                <li><a href="https://obalynazakazku.cz/iphone" title="Objednat" class="menuBackground">Objednat</a></li>
+                <li><a href="https://obalynazakazku.cz/kontakt" title="Kontakt" class="menuBackground">Kontakt</a></li>
+                <li class="telephone">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">{% block content %}{% endblock %}</div>
+    <footer>
+        <div class="container">
+            <div class="grid">
+                <div class="col col-1">
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/header-logo.webp') }}" alt="Obaly na zakázku">
                     </div>
                     <div class="contactNumber">
                         <p>Kontaktujte Nás</p>
