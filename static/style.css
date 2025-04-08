@@ -330,3 +330,35 @@ footer {
     color: var(--white);
     transition: 0.2s ease-in-out;
 }
+
+section {
+    padding-block: 20px;
+}
+
+.section-title {
+    margin-bottom: 50px;
+    font-weight: 800;
+    color: var(--dark-blue);
+    font-size: 24px;
+    line-height: 130%;
+    text-transform: uppercase;
+    text-align: center;
+}
+.a[type="button"], button {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    background: var(--orange);
+    padding: 18px 45px;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.a[type="button"]:hover, button:hover {
+    transform: translateY(-4px);
+    color: white;
+    box-shadow: #ff5e00 0 0 15px;
+    opacity: 1;
+}

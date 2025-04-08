@@ -4,72 +4,77 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='kontakt/kontakt.css') }}">
 {% endblock %}
 {% block content %}
-    <div class="contactForm">
-        <form action="/kontakt" class="form" method="POST">
-            <div class="formControl">
-                <label for="name">Vaše Jméno</label>
-                <input id="name" type="text" name="name" placeholder="Vaše Jméno">
-            </div>
-            <div class="formControl">
-                <label for="email">Email</label>
-                <input id="email" type="email" name="email" placeholder="Email">
-            </div>
-            <div class="formControl">
-                <label for="phoneNumber">Telefonní Číslo</label>
-                <input id="phoneNumber" type="tel" name="phoneNumber" placeholder="777 222 555">
-            </div>
-            <div class="formControl">
-                <label for="message">Váš Dotaz</label>
-                <textarea id="message" name="message"></textarea>
-            </div>
-            <div class="formControl">
-                <button type="submit">Odeslat</button>
-            </div>
-        </form>
-        <div class="theOtherBlock">
-            <div class="someArea">
-                <div class="area-title">
-                    <i class="fa-solid fa-map"></i>
-                    Kde Nás Najdete
+    <div class="section" style="margin-top: 20px;">
+        <div class="section-title">
+            <h2>Kontaktujte Nás</h2>
+        </div>
+        <div class="contactForm">
+            <form action="/kontakt" class="form" method="POST">
+                <div class="formControl">
+                    <label for="name">Vaše Jméno</label>
+                    <input id="name" type="text" name="name" placeholder="Vaše Jméno">
                 </div>
-                <p>
-                    IPHONE SERVIS PRAHA,
-                    <br>
-                    Ostrovského 971/11, Praha 5
-                    br
-                    Otevírací doba: Po-Pá, 12 - 17h.
-                </p>
-            </div>
-            <div class="someArea">
-                <div class="area-title">
-                    <i class="fa-solid fa-envelope"></i>
-                    Email
+                <div class="formControl">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Email">
                 </div>
-                <p>
-                    info@obalynazakazku.cz
-                </p>
-            </div>
-            <div class="someArea">
-                <div class="area-title">
-                    <i class="fa-solid fa-phone"></i>
-                    Telefon
+                <div class="formControl">
+                    <label for="phoneNumber">Telefonní Číslo</label>
+                    <input id="phoneNumber" type="tel" name="phoneNumber" placeholder="777 222 555">
                 </div>
-                <p>
-                    +420 602 20 25 23
-                </p>
-            </div>
-            <div class="someArea">
-                <div class="area-title">
-                    <i class="fa-solid fa-earth-americas"></i>
-                    Kde Nás Najdete
+                <div class="formControl">
+                    <label for="message">Váš Dotaz</label>
+                    <textarea id="message" name="message"></textarea>
                 </div>
-                <div class="flex">
-                    <a href="https://www.instagram.com/obalynazakazku/" class="instagram" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ url_for('static', filename='images/footer-instagram.webp') }}" alt="Instagram">
-                    </a>
-                    <a href="https://www.facebook.com/obalynazakazku" class="facebook" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ url_for('static', filename='images/footer-facebook.webp') }}" alt="Facebook">
-                    </a>
+                <div class="formControl">
+                    <button type="submit">Odeslat</button>
+                </div>
+            </form>
+            <div class="theOtherBlock">
+                <div class="someArea">
+                    <div class="area-title">
+                        <i class="fa-solid fa-map"></i>
+                        Kde Nás Najdete
+                    </div>
+                    <p>
+                        IPHONE SERVIS PRAHA,
+                        <br>
+                        Ostrovského 971/11, Praha 5
+                        br
+                        Otevírací doba: Po-Pá, 12 - 17h.
+                    </p>
+                </div>
+                <div class="someArea">
+                    <div class="area-title">
+                        <i class="fa-solid fa-envelope"></i>
+                        Email
+                    </div>
+                    <p>
+                        info@obalynazakazku.cz
+                    </p>
+                </div>
+                <div class="someArea">
+                    <div class="area-title">
+                        <i class="fa-solid fa-phone"></i>
+                        Telefon
+                    </div>
+                    <p>
+                        +420 602 20 25 23
+                    </p>
+                </div>
+                <div class="someArea">
+                    <div class="area-title">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        Kde Nás Najdete
+                    </div>
+                    <div class="flex">
+                        <a href="https://www.instagram.com/obalynazakazku/" class="instagram" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/footer-instagram.webp') }}" alt="Instagram">
+                        </a>
+                        <a href="https://www.facebook.com/obalynazakazku" class="facebook" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/footer-facebook.webp') }}" alt="Facebook">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
