@@ -21,6 +21,7 @@ def kontakt():
 @app.route('/iphone')
 def iphone():
     with databaseHandler() as db:
+        print(db.getPhoneModels())
         return render_template('order/order.html', phone_models=db.getPhoneModels())
 
 if __name__ == '__main__':

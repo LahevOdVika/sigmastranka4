@@ -363,3 +363,52 @@ section {
     box-shadow: #ff5e00 0 0 15px;
     opacity: 1;
 }
+
+.card {
+    border-radius: 20px;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 0 10px 60px 0 rgb(31 34 120 / 10%);
+    padding: 40px;
+}
+
+.models {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.models .card:hover {
+    top: 10px;
+    border-radius: 15px;
+}
+
+.models .card:hover::after {
+    top: -10px;
+}
+
+.models .card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.models .card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 80%;
+    margin-bottom: 20px;
+}
+
+.models .card .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.models .card .price {
+    font-size: 25px;
+    font-weight: 600;
+}
