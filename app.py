@@ -18,5 +18,10 @@ def kontakt():
             db.addUser(request.form['name'], request.form['email'], request.form['phoneNumber'], request.form['message'])
     return render_template('kontakt/kontakt.html')
 
+@app.route('/iphone')
+def iphone():
+    with databaseHandler() as db:
+        return render_template('order/order.html', phone_models=db.getPhoneModels())
+
 if __name__ == '__main__':
     app.run(debug=True)

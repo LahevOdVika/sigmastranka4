@@ -44,6 +44,19 @@ class databaseHandler:
         else:
             return []
 
+    def addPhoneModel(self, phone_generation: int, phone_variant: str, price: int):
+        print(phone_generation, phone_variant, price)
+        if self.cur is not None:
+            self.cur.execute('INSERT INTO phone_models (phone_generation, phone_variant, price) VALUES (?, ?, ?)', (phone_generation, phone_variant, price))
+            self.con.commit()
+
+    def getPhoneModels(self):
+        if self.cur is not None:
+            self.cur.execute('SELECT * FROM phone_models')
+            return self.cur.fetchall()
+        else:
+            return []
+
 if __name__ == '__main__':
     with databaseHandler() as db:
         print(db.readData())

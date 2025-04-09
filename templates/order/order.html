@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    Vyberte si model iPhonu k vlastnímu potisku | Obalynazakazku.cz
+{% endblock %}
+{% block link %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='order/order.css') }}">
+{% endblock %}
+{% block content %}
+	<div class="grid">
+        {% for model in phone_models %}
+            <div class="model">
+            Phone
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
