@@ -10,3 +10,15 @@
     z-index: 1;
     box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.08);
 }
+
+.salePrice {
+    color: red;
+    text-decoration: line-through;
+    font-style: italic;
+    font-weight: 200 !important;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
