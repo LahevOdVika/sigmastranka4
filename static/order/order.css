@@ -1,6 +1,6 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, 1fr);
 }
 
 .model {
@@ -21,4 +21,24 @@
 .column {
     display: flex;
     flex-direction: column;
+}
+
+.card {
+    text-align: center;
+    min-width: 33%;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        min-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
