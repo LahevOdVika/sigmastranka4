@@ -30,11 +30,10 @@ def iphone():
 
 
 @app.route('/design', methods=['POST', 'GET'])
-def design(model):
+def design():
     if request.method == 'POST':
-        model = request.get_json()['model']
-    print(model)
-    return render_template('design/design.html', model=model)
+        model = request.form.get('model')
+        return render_template('design/design.html', model=model)
 
 
 if __name__ == '__main__':
