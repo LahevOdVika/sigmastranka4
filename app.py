@@ -34,7 +34,7 @@ def design(model):
     if request.method == 'POST':
         model = request.get_json()['model']
     print(model)
-    return render_template('designer/designer.html', model=model)
+    return render_template('design/design.html', model=model)
 
 
 if __name__ == '__main__':
