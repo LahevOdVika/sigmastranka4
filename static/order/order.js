@@ -1,5 +1,4 @@
-function redirectToDesignPage(model) {
-    model = model.toLowerCase();
-    model = model.replaceAll(/\s/g, '');
-    window.location.href = 'design/' + model + '/';
+function submitModel(model) {
+    document.querySelector('.modelInput').value = model;
+    document.querySelector('.modelForm').submit();
 }
