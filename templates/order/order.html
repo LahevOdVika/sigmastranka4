@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+    Vyberte si model iPhonu k vlastnímu potisku | Obalynazakazku.cz
+{% endblock %}
+{% block link %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='order/order.css') }}">
+{% endblock %}
+{% block content %}
+	<div class="grid models">
+        {% for model in phone_models %}
+            <div class="card" onclick="redirectToDesignPage('{{ model[1] }}')">
+                <div class="phone-details">
+                    <img src="https://cdn.myshoptet.com/usr/www.iphonarna.cz/user/shop/big/3749_apple-iphone-12-256-gb-blue.png?67373560" alt="Placeholder">
+                    <h3>IPhone {{ model[1] }}</h3>
+                </div>
+                <hr style="width: 100%;" />
+                {% if model[3] == 0 %}
+                    <div class="info">
+                        <span class="price">{{ model[2] }}CZK</span>
+                        <a href="#" class="create" type="button">
+                            Přejít k designu
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    {% else %}
+                    <div class="info">
+                        <div class="column">
+                            <span class="price salePrice">{{ model[2] }}CZK</span>
+                            <span class="price">{{ model[4] }}CZK</span>
+                        </div>
+                        <a href="#" class="create" type="button">
+                            Přejít k designu
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block javascript %}
+	<script src="{{ url_for('static', filename='order/order.js') }}"></script>
+{% endblock %}

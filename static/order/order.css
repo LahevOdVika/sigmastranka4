@@ -1,0 +1,50 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+}
+
+.model {
+    height: 100%;
+    border-radius: 20px;
+    background-color: var(--white);
+    z-index: 1;
+    box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.08);
+}
+
+.salePrice {
+    color: red;
+    text-decoration: line-through;
+    font-style: italic;
+    font-weight: 200 !important;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    text-align: center;
+    min-width: 33%;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 10px 60px rgb(31 34 120 / 50%);
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        min-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
