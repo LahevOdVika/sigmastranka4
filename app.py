@@ -3,16 +3,13 @@ from dbHandler import databaseHandler
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def hello_world():
     return render_template('home/index.html')
 
-
 @app.route('/base')
 def base():
-    return render_template('base.html')  # Render na base, hlavně na debug
-
+    return render_template('base.html') # Render na base, hlavně na debug
 
 @app.route('/kontakt', methods=['POST', 'GET'])
 def kontakt():
