@@ -25,12 +25,18 @@ def iphone():
     with databaseHandler() as db:
         return render_template('order/order.html', phone_models=db.getPhoneModels())
 
-
 @app.route('/design', methods=['POST', 'GET'])
 def design():
     if request.method == 'POST':
         model = request.form.get('model')
-        return render_template('design/design.html', model=model)
+        if not model:
+            return 'Model nebyl poskytnut.', 400
+        with databaseHandler() as db:
+            if db.checkPhoneExistence(model):
+                print(model)
+                return render_template('design/design.html', model=model)
+            else:
+                return 'Žádný obal pro tento model.', 400
 
 
 if __name__ == '__main__':
