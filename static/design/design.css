@@ -1,0 +1,49 @@
+.uploadEditBox {
+    border: 1px solid grey;
+    border-radius: 8px;
+    height: 400px;
+}
+
+.uploadSection {
+    display: none;
+}
+
+/*
+    Uploading image
+*/
+.uploadEditBox[data-stage="upload"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadEditBox[data-stage="upload"] .uploadSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.uploadFile {
+    display: none;
+}
+
+.uploadFileLabel {
+    font-size: 30px;
+}
+
+.uploadFileLabel:hover {
+    cursor: pointer;
+    color: var(--orange);
+}
+
+.fa-upload {
+    font-size: 40px;
+}
+
+/*
+    Image edit
+*/
+

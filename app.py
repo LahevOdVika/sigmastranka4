@@ -1,7 +1,12 @@
-from flask import Flask, render_template, request
+import datetime
+import os.path
+from traceback import print_tb
+
+from flask import Flask, render_template, request, url_for
 from dbHandler import databaseHandler
 
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
 @app.route('/')
 def hello_world():
@@ -29,15 +34,23 @@ def iphone():
 def design():
     if request.method == 'POST':
         model = request.form.get('model')
-        if not model:
-            return 'Model nebyl poskytnut.', 400
-        with databaseHandler() as db:
-            if db.checkPhoneExistence(model):
-                print(model)
-                return render_template('design/design.html', model=model)
-            else:
-                return 'Žádný obal pro tento model.', 400
+        return render_template('design/design.html', model=model)
 
+@app.route('/refresh-editor', methods=['POST', 'GET'])
+def refreshEditor():
+    if request.method == 'POST':
+        try:
+            img = request.files['img']
+            if img.filename != '':
+                current_time = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+                filepath = os.path.join(app.config['UPLOAD_FOLDER'], current_time + os.path.splitext(img.filename)[1])
+                img.save(filepath)
+                return render_template('design/editor.html', stage='editing', image_url=url_for('static', filename='uploads/' + current_time + os.path.splitext(img.filename)[1]))
+        except Exception as e:
+            print(e)
+            return render_template('design/editor.html', stage='upload')
+    else:
+        return render_template('design/editor.html', stage='upload')
 
 if __name__ == '__main__':
     app.run(debug=True)

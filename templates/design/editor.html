@@ -1,0 +1,13 @@
+{% if stage == 'editing' %}
+    <img src="{{ image_url }}" alt="Case image">
+{% else %}
+    <div class="uploadEditBox" data-stage="upload">
+        <form action="#" method="post" enctype="multipart/form-data" id="uploadForm">
+            <div class="uploadSection">
+                <i class="fa-solid fa-upload"></i>
+                <label for="uploadFile" class="uploadFileLabel">Nahrát Obrázek</label>
+                <input type="file" name="img" accept="image/" id="uploadFile" class="uploadFile">
+            </div>
+        </form>
+    </div>
+{% endif %}

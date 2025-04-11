@@ -2,6 +2,36 @@
 {% block title %}
 	Obaly na iPhone {{ model }} s vlastním potiskem | Obalynazakazku.cz
 {% endblock %}
+{% block link %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='design/design.css') }}">
+{% endblock %}
 {% block content %}
-	{{ model }}
+	<div class="section-title">
+        <h1>iPhone {{ model }}</h1>
+    </div>
+    {% include 'design/editor.html' %}
+{% endblock %}
+{% block javascript %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const uploadForm = document.getElementById('uploadForm');
+            const uploadFile = document.getElementById('uploadFile');
+
+            uploadFile.addEventListener('change', function(event) {
+                const formData = new FormData(uploadForm);
+
+                fetch('/refresh-editor', {
+                    method: 'POST',
+                    body: formData,
+                })
+                    .then(response => response.text())
+                    .then(html => {
+                        document.querySelector('.uploadEditBox').innerHTML = html;
+                    })
+                    .catch(error => {
+                        console.error('Chyba při odesílání formuláře:', error);
+                    });
+            });
+        });
+    </script>
 {% endblock %}
