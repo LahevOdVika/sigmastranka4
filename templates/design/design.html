@@ -26,7 +26,7 @@
                 })
                     .then(response => response.text())
                     .then(html => {
-                        document.querySelector('.uploadEditBox').innerHTML = html;
+                        document.querySelector('.uploadEditBox').outerHTML = html;
                     })
                     .catch(error => {
                         console.error('Chyba při odesílání formuláře:', error);

@@ -34,7 +34,7 @@ def iphone():
 def design():
     if request.method == 'POST':
         model = request.form.get('model')
-        return render_template('design/design.html', model=model)
+        return render_template('design/design.html', model=model, stage='upload')
 
 @app.route('/refresh-editor', methods=['POST', 'GET'])
 def refreshEditor():

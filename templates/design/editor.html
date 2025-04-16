@@ -1,7 +1,7 @@
-{% if stage == 'editing' %}
-    <img src="{{ image_url }}" alt="Case image">
-{% else %}
-    <div class="uploadEditBox" data-stage="upload">
+<div class="uploadEditBox" data-stage="{{ stage }}">
+    {% if stage == 'editing' %}
+            <img src="{{ image_url }}" alt="Case image">
+    {% else %}
         <form action="#" method="post" enctype="multipart/form-data" id="uploadForm">
             <div class="uploadSection">
                 <i class="fa-solid fa-upload"></i>
@@ -9,5 +9,5 @@
                 <input type="file" name="img" accept="image/" id="uploadFile" class="uploadFile">
             </div>
         </form>
-    </div>
-{% endif %}
+    {% endif %}
+</div>
