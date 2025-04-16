@@ -7,10 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template('home/index.html')
 
-@app.route('/home')
-def home():
-    return render_template('home/index.html')
-
 @app.route('/base')
 def base():
     return render_template('base.html') # Render na base, hlavně na debug
