@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block title %}
-	Obaly na iPhone {{ model }} s vlastním potiskem | Obalynazakazku.cz
+	Obaly na iPhone {{ model['model'] }} s vlastním potiskem | Obalynazakazku.cz
 {% endblock %}
 {% block link %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='design/design.css') }}">
 {% endblock %}
 {% block content %}
 	<div class="section-title">
-        <h1>iPhone {{ model }}</h1>
+        <h1>iPhone {{ model['model'] }}</h1>
     </div>
     {% include 'design/editor.html' %}
 {% endblock %}
@@ -17,8 +17,12 @@
             const uploadForm = document.getElementById('uploadForm');
             const uploadFile = document.getElementById('uploadFile');
 
+            const data = {{ model | tojson }}
+
             uploadFile.addEventListener('change', function(event) {
                 const formData = new FormData(uploadForm);
+
+                formData.append('model', JSON.stringify(data));
 
                 fetch('/refresh-editor', {
                     method: 'POST',

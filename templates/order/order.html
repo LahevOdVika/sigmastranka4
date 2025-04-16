@@ -7,11 +7,11 @@
 {% endblock %}
 {% block content %}
     <form action="/design" method="POST" style="display: none" class="modelForm">
-        <input type="hidden" name="model" class="modelInput">
+        <input type="hidden" name="model" class="model">
     </form>
 	<div class="grid models">
         {% for model in phone_models %}
-            <div class="card" onclick="submitModel('{{ model[1] }}')">
+            <div class="card" onclick="submitModel({{ model[0] }}, '{{ model[1] }}')">
                 <div class="phone-details">
                     <img src="https://cdn.myshoptet.com/usr/www.iphonarna.cz/user/shop/big/3749_apple-iphone-12-256-gb-blue.png?67373560" alt="Placeholder">
                     <h3>IPhone {{ model[1] }}</h3>

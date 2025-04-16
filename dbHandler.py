@@ -44,10 +44,10 @@ class databaseHandler:
         else:
             return []
 
-    def addPhoneModel(self, phone_generation: str, phone_variant: str, price: int):
+    def addPhoneModel(self, phone_generation: str, phone_variant: str, price: int, model_template: str):
         print(phone_generation, phone_variant, price)
         if self.cur is not None:
-            self.cur.execute('INSERT INTO phone_models (phone_generation, price) VALUES (?, ?)', (phone_generation, price))
+            self.cur.execute('INSERT INTO phone_models (phone_generation, price, model_template) VALUES (?, ?, ?)', (phone_generation, price, model_template))
             self.con.commit()
 
     def getPhoneModels(self):
@@ -56,6 +56,24 @@ class databaseHandler:
             return self.cur.fetchall()
         else:
             return []
+
+    def getOnePhone(self, phone_id: int):
+        if self.cur is not None:
+            self.cur.execute('SELECT * FROM phone_models WHERE phone_id = ?', (phone_id,))
+            result = self.cur.fetchall()
+            if result:
+                return result[0]
+            else:
+                return None
+
+    def getOnePhoneTemplate(self, phone_id: int):
+        if self.cur is not None:
+            self.cur.execute('SELECT model_template FROM phone_models WHERE phone_id = ?', (phone_id,))
+            result = self.cur.fetchone()
+            if result:
+                return result[0]
+            else:
+                return None
 
     def checkPhoneExistence(self, phone_generation: str):
         if self.cur is not None:
