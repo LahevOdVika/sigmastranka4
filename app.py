@@ -4,7 +4,7 @@ from dbHandler import databaseHandler
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def index():
     return render_template('home/index.html')
 
 @app.route('/base')
@@ -37,6 +37,10 @@ def design():
                 return render_template('design/design.html', model=model)
             else:
                 return 'Žádný obal pro tento model.', 400
+            
+@app.route('/galerie')
+def galerie():
+    return 'Galerie guh'
 
 
 if __name__ == '__main__':
