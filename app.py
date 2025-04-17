@@ -38,6 +38,8 @@ def design():
         model_json = request.form.get('model')
         model = json.loads(model_json)
         return render_template('design/design.html', model=model, stage='upload')
+    return None
+
 
 @app.route('/refresh-editor', methods=['POST', 'GET'])
 def refreshEditor():

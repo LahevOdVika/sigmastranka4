@@ -1,11 +1,7 @@
 .uploadEditBox {
     border: 1px solid grey;
     border-radius: 8px;
-    height: 400px;
-}
-
-.uploadSection {
-    display: none;
+    display: block;
 }
 
 /*
@@ -46,4 +42,46 @@
 /*
     Image edit
 */
-
+.templateWrapper {
+    position: relative;
+    overflow: hidden;
+    cursor: move;
+    z-index: 1;
+    background: transparent;
+    border-radius: 8px;
+    max-width: 340px;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed blue;
+}
+.templateWrapper:before {
+    content: '';
+    background-image: url("/static/templates/iphone11promax.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+.imageDrag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    cursor: move;
+    will-change: transform;
+    transform: scale(0.5);
+}
+.inputs {
+    display: block;
+}
+.uploadEditBox[data-stage="upload"] .inputs {
+    display: none;
+}
