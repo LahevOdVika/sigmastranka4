@@ -13,36 +13,42 @@
         <div class="changeThis">
             {% include 'design/editor.html' %}
         </div>
-        <div class="inputs">
-            <div class="title"></div>
+        <div class="editSide">
+            <div class="title">Úprava</div>
             <div class="range">
                 <label for="size">
                     Velikost Obrázku <span class="amount"></span>%
                 </label>
-                <br>
-                <input type="range" name="size" class="sizeRange" id="size" value="100">
+                <input type="range" name="size" class="sizeRange" id="size" value="100" min="1" max="600">
             </div>
             <div class="range">
                 <label for="rotation">
                     Rotace Obrázku <span class="amount"></span>°
                 </label>
-                <br>
-                <input type="range" id="rotation" name="rotation" class="rotationRange" value="0" max="360">
+                <input type="range" id="rotation" name="rotation" class="rotationRange" value="0" min="0" max="360">
             </div>
             <div class="range">
                 <label for="transparency">
                     Neprůhlednost Obrázku <span class="amount"></span>%
                 </label>
-                <br>
-                <input type="range" name="transparency" id="transparency" class="transparencyRange" value="100">
+                <input type="range" name="transparency" id="transparency" class="transparencyRange" value="100" min="1" max="100">
             </div>
             <div class="range">
                 <label for="zoom">
                     Zoom Obrázku <span class="amount"></span>%
                 </label>
-                <br>
-                <input type="range" name="zoom" id="zoom" class="zoomRange" value="100">
+                <input type="range" name="zoom" id="zoom" class="zoomRange" value="100" min="1" max="100">
             </div>
+            <div class="title">Informace</div>
+            <ul class="information">
+                <li>Obrázek umístěte dle Vašich představ.</li>
+                <li>S obrázkem můžete v náhledu libovolně manipulovat.</li>
+                <li>Kdykoliv můžete tvorbu resetovat a začít znova.</li>
+                <li>Jedná se o nezávaznou objednávku.</li>
+                <li>Fotografie se netisknou na černém podkladu z důvodu snahy o co nejkvalitnější
+                    výsledek.</li>
+            </ul>
+            <button class="reset" type="button">Resetovat</button>
         </div>
     </div>
 {% endblock %}
