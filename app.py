@@ -4,7 +4,7 @@ import os.path
 from fileinput import filename
 from traceback import print_tb
 
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, jsonify
 from dbHandler import databaseHandler
 
 app = Flask(__name__)
@@ -55,11 +55,10 @@ def refreshEditor():
 
                     template = db.getOnePhoneTemplate(model_received['id'])
 
-                    return render_template(
-                        'design/editor.html',
-                        stage='editing',
-                        image_url=url_for('static', filename='uploads/' + current_time + os.path.splitext(img.filename)[1]),
-                        model_template=url_for('static', filename='templates/' + template))
+                    return jsonify({
+                        'image_url': url_for('static', filename='uploads/' + current_time + os.path.splitext(img.filename)[1]),
+                        'model_template': url_for('static', filename='templates/' + template)
+                    })
         except Exception as e:
             print(e)
             return render_template('design/editor.html', stage='upload')

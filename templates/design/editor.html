@@ -1,13 +1,1 @@
-{% if stage == 'editing' %}
-    <div class="templateWrapper">
-        <img src="{{ image_url }}" alt="Case image" class="imageDrag">
-    </div>
-{% else %}
-    <form action="#" method="post" enctype="multipart/form-data" id="uploadForm">
-        <div class="uploadSection">
-            <i class="fa-solid fa-upload"></i>
-            <label for="uploadFile" class="uploadFileLabel">Nahrát Obrázek</label>
-            <input type="file" name="img" accept="image/" id="uploadFile" class="uploadFile">
-        </div>
-    </form>
-{% endif %}
+

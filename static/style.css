@@ -6,6 +6,7 @@
     --orange: #f5894a;
     --white: #fff;
     --border-color: #565acf3d;
+    --before-bg-image: unset;
 }
 
 * {

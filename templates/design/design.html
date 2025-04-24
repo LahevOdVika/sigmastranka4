@@ -10,8 +10,15 @@
         <h1>iPhone {{ model['model'] }}</h1>
     </div>
     <div class="uploadEditBox" data-stage="upload">
-        <div class="changeThis">
-            {% include 'design/editor.html' %}
+        <form action="#" method="post" enctype="multipart/form-data" id="uploadForm">
+            <div class="uploadSection">
+                <i class="fa-solid fa-upload"></i>
+                <label for="uploadFile" class="uploadFileLabel">Nahrát Obrázek</label>
+                <input type="file" name="img" accept="image/" id="uploadFile" class="uploadFile">
+            </div>
+        </form>
+        <div class="templateWrapper">
+            <img src="" alt="Case image" class="imageDrag">
         </div>
         <div class="editSide">
             <div class="title">Úprava</div>
@@ -33,12 +40,6 @@
                 </label>
                 <input type="range" name="transparency" id="transparency" class="transparencyRange" value="100" min="1" max="100">
             </div>
-            <div class="range">
-                <label for="zoom">
-                    Zoom Obrázku <span class="amount"></span>%
-                </label>
-                <input type="range" name="zoom" id="zoom" class="zoomRange" value="100" min="1" max="100">
-            </div>
             <div class="title">Informace</div>
             <ul class="information">
                 <li>Obrázek umístěte dle Vašich představ.</li>
@@ -58,6 +59,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const uploadForm = document.getElementById('uploadForm');
             const uploadFile = document.getElementById('uploadFile');
+            const templateWrapper = document.querySelector('.templateWrapper');
 
             const data = {{ model | tojson }}
 
@@ -70,9 +72,15 @@
                     method: 'POST',
                     body: formData,
                 })
-                    .then(response => response.text())
-                    .then(html => {
-                        document.querySelector('.changeThis').outerHTML = html;
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        document.querySelector('.imageDrag').src = data.image_url;
+                        templateWrapper.style.setProperty('--before-bg-image', `url(${data.model_template})`);
                         document.querySelector('.uploadEditBox').dataset.stage = 'editing';
                     })
                     .catch(error => {

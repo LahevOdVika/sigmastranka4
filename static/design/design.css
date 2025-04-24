@@ -2,6 +2,7 @@
     border: 1px solid grey;
     border-radius: 8px;
     display: flex;
+    min-height: 560px;
 }
 
 /*
@@ -48,6 +49,9 @@
     gap: 30px;
     border: none;
 }
+.uploadEditBox[data-stage="editing"] form {
+    display: none;
+}
 .templateWrapper {
     position: relative;
     overflow: hidden;
@@ -60,7 +64,7 @@
 }
 .templateWrapper:before {
     content: '';
-    background-image: url("/static/templates/iphone11promax.png");
+    background-image: var(--before-bg-image);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: block;
@@ -79,12 +83,15 @@
     width: 100%;
     height: auto;
     z-index: 2;
-    cursor: move;
+    cursor: grab;
     will-change: transform;
-    transform: scale(0.5);
+    transition: none;
+    user-select: none;
 }
 .editSide {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 15px 20px;
     border-radius: 8px;
     background: #f7f7ff;
